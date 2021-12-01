@@ -1,0 +1,31 @@
+const int button = 2;
+int counter = 0;
+  
+void setup()
+{
+  pinMode(9, OUTPUT);
+  pinMode(13, INPUT);
+}
+
+void loop()
+{
+  int buttonState;
+  buttonState = digitalRead(13);
+  if (buttonState == HIGH)
+  {
+    counter++;
+    delay(100);
+  }
+  else if(counter == 0)
+  {
+    digitalWrite(9, LOW);
+  }
+  else if(counter == 1)
+  {
+    digitalWrite(9, HIGH);
+  }
+  else
+  {
+    (counter == 0);
+  }
+}
